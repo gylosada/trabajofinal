@@ -1,0 +1,14 @@
+html{
+	body{
+		.sobremipag{
+			background-image: url(../imagenes/sobremi.jpg);
+			background-position: center top;
+			h1{
+				margin-top: 90px;
+			}
+			p{
+				color: $white;
+			}
+		}
+	}
+}

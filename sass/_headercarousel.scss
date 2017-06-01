@@ -1,0 +1,152 @@
+html{
+	body{
+		.slider{
+			background-image: none;
+			#carousel-example-generic{
+				z-index: 1;
+				.headercontenedor{
+					.navprincipal{
+						padding: 0 20px 0 10px;
+						box-sizing: border-box;
+						z-index: 100;
+						position: relative;
+					}
+				}
+				.tituloheader{
+					position: absolute;
+					top: 25%;
+					left: 14%;
+					z-index: 2;
+					width: 100%;
+					h1{
+						display: inline-block;
+						border-bottom: 2px solid $gold;
+						margin-bottom: 12px;
+					}
+					p{
+						color: $white;
+					}
+					.botones{
+						margin-top: 90px;
+						a{
+							color: $white;
+							display: inline-block;
+							width: 10%;
+							margin: 0 25px;
+							.boton{
+								font-size: 13px;
+								letter-spacing: 1px;
+								margin-top: 25px;
+								@include boton(85px, capitalize);
+							}
+							.boton:before{
+								@include botonbefore(74px, 13px, 21px, $white);
+							}
+							.boton:after{
+								@include botonafter(76px, 12px, 5px, $white);
+							}
+						}
+						a:first-child{
+							margin: 0 25px 0 0;
+						}
+						a:last-child{
+							margin: 0 0 0 25px;
+						}
+						a:hover{
+							color: $gold;
+						}				
+						a:hover > .boton:before{
+							@include botonbefore(74px, 13px, 21px, $gold);
+						}
+					}
+				}
+				.carousel-inner{
+					background: rgb(45,53,50);
+					position: relative;
+					top: -156px;
+					.item{
+						opacity: 0.2;
+						width: 100%;
+						height: auto;
+						overflow: hidden;
+						img{
+							max-width: 100%;
+							height: auto;
+						}
+					}
+				}
+				.carousel-control {
+					opacity: 1;
+					text-shadow: none;
+					z-index: 5;
+					width: 0;
+					.ion-ios-arrow-left,
+					.ion-ios-arrow-right{
+						width: 30px;
+						height: 30px;
+						font-size: 50px;
+						position: absolute;
+						top: 40%;
+						color: #F5F5D5;
+					}
+				}
+				.left{
+					margin-left: 5%;
+				}
+				.right{
+					margin-right: 5%;
+				}
+			}
+		}
+		.proysec{
+			padding-top: 100px;
+			box-sizing: border-box;
+			text-align: center;
+			margin: auto;
+			div{
+				h2{
+					font-size: 40px;
+					color: $blue;
+				}
+				article{
+					.carousel2{
+						width: 30%;
+					}
+				}
+			}
+		}
+		#seccionesp{
+			background: $black;
+			div{
+				h2{
+					color: $gold;
+				}
+				p{
+					color: $white;
+				}
+			}
+		}
+		#seccionsist{
+			background: $blue;
+			div{
+				h2{
+					color: $black;
+				}
+				p{
+					color: $white;
+				}
+			}
+		}
+		#seccionbrand{
+			background: $gold;
+			div{
+				h2{
+					color: $black;
+				}
+				p{
+					color: $white;
+				}
+			}
+		}
+	}
+}

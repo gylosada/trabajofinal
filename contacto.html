@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Griselda Losada</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<script src="https://use.fontawesome.com/65749ea90f.js"></script>
+</head>
+
+<body>
+	<header class="contacto">
+		<div class="contenedor headercontenedor">
+			<nav class="navprincipal">
+				<a class="logo" href="index.html" alt="glosa"></a>
+				<ul class="nav1">
+					<li><a href="sobremi.html">Sobre mí</a></li>
+					<li><a href="proyectos.html">Proyectos</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+				
+				<div class="btn-group">
+					<button type="button" class="barras btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="bars"></div>
+						<div class="bars"></div>
+						<div class="bars"></div>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="sobremi.html">Sobre mí</a></li>
+						<li><a href="proyectos.html">Proyectos</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
+					</ul>
+				</div>	
+			</nav>
+		</div>
+
+
+
+
+		<div class="contenedor">
+			<div class="ochenta">
+				<h1>Consultas</h1>
+				<p>Para pedir presupuestos, o cualquier consulta no dudes en contactarme</p>
+
+				<form class="ochenta" action="enviar.php" method="post" enctype="text/plain">
+
+					<input type="hidden" name="subject" value="consulta">
+					<input type="hidden" name="recipient" value="grilosada@gmail.com">
+					<input type="hidden" name="redirect" value="contacto2.html">
+
+
+					<div class="trescolumnas">
+						<label for="fname">
+							<h5>nombre</h5>
+						</label>
+						<input type="text" id="fname" name="firstname" placeholder="_">
+					</div>
+
+					<div class="trescolumnas">
+						<label for="name">
+							<h5>teléfono</h5>
+						</label>
+						<input type="number" id="fname" name="firstname" placeholder="_">
+					</div>
+
+					<div class="trescolumnas">
+						<label for="fname">
+							<h5>email</h5>
+						</label>
+						<input type="email" id="fname" name="firstname" placeholder="_">
+					</div>					
+
+					<label for="subject">
+						<h5>consulta</h5>
+					</label>
+					<textarea id="subject" name="subject" placeholder="Escriba su consulta..." style="height:140px">
+					</textarea>
+
+					<input class="enviar" type="submit" value="ENVIAR">
+				</form>
+			</div>
+		</div>
+	</header>
+
+
+<section>
+	<article class="mapagoogle">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13140.173060217856!2d-58.43445775!3d-34.5777718!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1496358240524" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</article>
+</section>
+
+
+		<footer id="footerseccion">
+		<div class="contenedor">
+			<div class="ochenta">
+				<nav>
+					<div>
+						<a class="logo" href="index.html" alt="glosa"></a>
+					</div>
+					<div>
+						<h5>Sobre mí</h5>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula</p>
+					</div>
+				</nav>
+				<div class="infofooter">
+					<div>
+						<h5>Contacto</h5>
+						<p>15-5706-2814</p>
+						<p>grilosada@gmail.com</p>
+					</div>
+					<div>
+						<h5>Encontrame</h5>
+						<ul>
+							<li class="icono">
+								<a href="https://www.behance.net/grichulosada" target="_blank" class="fa fa-behance"></a>
+							</li>
+							<li class="icono">
+								<a href="https://www.linkedin.com/in/griselda-losada-703714141/" target="_blank" class="fa fa-linkedin"></a>
+							</li>
+							<li class="icono">
+								<a href="https://www.facebook.com/grichulosada" target="_blank" class="fa fa-facebook"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="copyrights">©2017 Copyright - Griselda Losada - All Rights Reserved</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

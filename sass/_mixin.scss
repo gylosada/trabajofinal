@@ -1,0 +1,43 @@
+
+
+/*-- botones --------------------------------------*/
+
+
+
+/*- general-*/
+@mixin boton($ancho, $tipocaja){
+	width: $ancho;
+	height: 35px;
+	text-align: center;
+	position: relative;
+	text-transform: $tipocaja;
+}
+
+
+
+/*-seudo elementos-*/
+
+@mixin botonbefore($ancho, $left, $bottom, $color) {
+   	content: "";
+	width: $ancho;
+	height: 24px;
+	position: absolute;
+	left: $left;
+	bottom: $bottom;
+	border-top: 1px solid $color;
+	border-right: 1px solid $color;
+}
+
+
+@mixin botonafter($ancho, $right, $top, $color) {
+   	content: "";
+	width: $ancho;
+	height: 24px;
+	position: absolute;
+	right: $right;
+	top: $top;
+	border-bottom:1px solid $color;
+	border-left: 1px solid $color;
+}
+
+/*----------------------------------------------*/
