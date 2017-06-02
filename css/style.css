@@ -254,7 +254,7 @@ html body #seccionbrand {
     color: #2E3532; }
   html body #seccionbrand div p {
     color: #F5F5D5; }
-html body article {
+html body .brand1 {
   display: inline-block;
   width: 20%;
   margin: 50px 10px 0 10px;
@@ -263,7 +263,7 @@ html body article {
   background-size: cover;
   height: 200px; }
   @media (max-width: 700px) {
-    html body article {
+    html body .brand1 {
       width: 40%; } }
 
 .mapagoogle {
