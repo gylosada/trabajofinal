@@ -2,6 +2,9 @@ html{
 	body{
 		.slider{
 			background-image: none;
+			@media (max-width: 1024px){
+				height: auto;
+			}
 			#carousel-example-generic{
 				z-index: 1;
 				.headercontenedor{
@@ -22,12 +25,18 @@ html{
 						display: inline-block;
 						border-bottom: 2px solid $gold;
 						margin-bottom: 12px;
+						@media (max-width: 930px){
+							font-size: 60px;
+							margin-top: 0px;
+						}
 					}
 					p{
 						color: $white;
 					}
 					.botones{
 						margin-top: 90px;
+						padding-bottom: 50px;
+						box-sizing: border-box;
 						a{
 							color: $white;
 							display: inline-block;
@@ -57,6 +66,9 @@ html{
 						}				
 						a:hover > .boton:before{
 							@include botonbefore(74px, 13px, 21px, $gold);
+						}
+						@media (max-width: 850px){
+							margin-top: 30px;
 						}
 					}
 				}
@@ -99,24 +111,23 @@ html{
 			}
 		}
 		.proysec{
-			padding-top: 100px;
-			box-sizing: border-box;
+			padding-top: 50px;
 			text-align: center;
 			margin: auto;
+			padding-bottom: 50px;
+			box-sizing: border-box;
 			div{
+				margin: auto;
 				h2{
 					font-size: 40px;
 					color: $blue;
-				}
-				article{
-					.carousel2{
-						width: 30%;
-					}
 				}
 			}
 		}
 		#seccionesp{
 			background: $black;
+			padding-bottom: 50px;
+			box-sizing: border-box;
 			div{
 				h2{
 					color: $gold;
@@ -128,6 +139,8 @@ html{
 		}
 		#seccionsist{
 			background: $blue;
+			padding-bottom: 50px;
+			box-sizing: border-box;
 			div{
 				h2{
 					color: $black;
@@ -139,6 +152,8 @@ html{
 		}
 		#seccionbrand{
 			background: $gold;
+			padding-bottom: 50px;
+			box-sizing: border-box;
 			div{
 				h2{
 					color: $black;
@@ -146,6 +161,18 @@ html{
 				p{
 					color: $white;
 				}
+			}
+		}
+		article{
+			display: inline-block;
+			width: 20%;
+			margin: 50px 10px 0 10px;
+			box-sizing: border-box;
+			background-image: url(../imagenes/11.jpg);
+			background-size: cover;
+			height: 200px;
+			@media (max-width: 700px){
+				width: 40%;
 			}
 		}
 	}

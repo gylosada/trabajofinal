@@ -543,7 +543,6 @@ html{
 				margin-top: 40px;
 				li{
 					display: flex;
-					flex-wrap: wrap;
 					margin-top: 60px;
 					img{
 						align-self: center;
@@ -562,91 +561,81 @@ html{
 					}
 				}
 				/*-cómo escalar los #port y a-*/
-				#port1{
+				#port1,
+				#port2,
+				#port3,
+				#port4{
 					position: relative;
 					display: inline-block;
 				}
-				#port1 > a{
+				#port1 > a,
+				#port3 > a{
 					position: absolute;
 					top: 0;
 					left: 0;
 					width: 100%;
 					height: 100%;
 				}
-				#port2 > a {					
-					top: 494px;
-					width: 957px;
-				}				
-				#port3 > a{
-					top: 784px;
-					width: 957px;
-				}
+				#port2 > a,
 				#port4 > a{
-					top: 1074px;
-					width: 642px;
+					position: absolute;
+					text-align: right;
+					top: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
 				}
 				/*--hovers--*/
 				li:hover > a {
 					display: flex;
 					align-items: center;
 				}
-				#port2:hover > a:after,
-				#port3:hover > a:before{
-					width: 715px;
-				}
-				#port1:hover > a:before,
-				#port4:hover > a:after{
-					width: 400px;
-				}
 				#port1:hover > a:before,
 				#port3:hover > a:before,
-				#port2:hover > a:after,
-				#port4:hover > a:after{
+				#port2:hover > a:before,
+				#port4:hover > a:before{
 					content: "";
 					display: inline-block;
 					height: 1px;
 					background: white;
 					margin-bottom: 5px;
+					width: 60%;
 				}
 				li:first-child{
 					margin-top: 0;
 				}
-
-				li:nth-child(odd){
-					justify-content: flex-start;
-				}
-				li:nth-child(even){
-					justify-content: flex-end;
-					text-align: right;
-				}
 			}
 		}
-		a{	/*--		
-			clear: both;
-			display: block;
-			color: $white;
-			letter-spacing: 1px;
-			box-sizing: content-box;
-			font-size: 13px;
+		.vermas{
 			text-align: center;
-			text-transform: uppercase;
-			margin: 35px 0 20px 0;
-			.boton{
+			a{		
+				display: inline-block;
+				color: $white;
+				letter-spacing: 1px;
+				box-sizing: content-box;
+				font-size: 13px;
+				text-align: center;
+				margin: 35px 0 20px 0;
+				.boton{
 					@include boton(85px, capitalize);
+					span{
+						text-transform: uppercase;
+					}
 				}
-			.boton:before{
-				@include botonbefore(77px, 10px, 5px, $white);
+				.boton:before{
+					@include botonbefore(78px, 9px, 20px, $white);
+				}
+				.boton:after{
+					@include botonafter(78px, 11px, 5px, $white);
+				}
 			}
-			.boton:after{
-				@include botonafter(78px, 10px, 10px, $white);
-			}--*/
-		}
-		#boton3:hover{
-			color: $gold;
-		}
-		#boton3:hover > .boton:before{
-			border-top: 1px solid $gold;
-			border-right: 1px solid $gold;
+			a:hover {
+				color: $gold;
+			}
+			a:hover > .boton:before{
+				border-top: 1px solid $gold;
+				border-right: 1px solid $gold;
+			}
 		}
 	}
 }
@@ -688,6 +677,8 @@ html{
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				padding: 40px 0;
+				box-sizing: border-box;
 				.margenes{
 					padding: 30px 0;
 					box-sizing: border-box;
@@ -701,6 +692,9 @@ html{
 						height: 115px;
 						margin: auto;
 						display: inline-block;
+						border-right: 5px solid $black;
+						border-left: 5px solid $black;
+						box-sizing: border-box;
 						span{
 							display: inline-block;
 							img{
@@ -723,37 +717,35 @@ html{
 							animation-name: lineamovilx;
 							animation-itinaration-count: infinite;
 							animation-duration: 4s;
+							@media (max-width: 930px){
+								width: 105px;
+							}
 						}
 						h5{
 							border-bottom: 2px dotted $black;
 							width: 75%;
 							margin: auto;
-							margin-top: -85px;
-							padding-top: 15px;
-							height: 68px;
+							padding-top: 25px;
+							height: 83px;
 							box-sizing: border-box;
 							display: inline-block;
 						}
+						@media (max-width: 930px){
+							width: 290px;
+
+						}
 					}
-					.caja1:before,
-					.caja1:after{
-						content: "";
-						display: inline-block;
-						background: $black;
-						height: 115px;
-						width: 5px;
-						animation-name: lineamovily;
-						animation-itinaration-count: infinite;
-						animation-duration: 4s;
-					}
-					.caja1:after{
-						animation-direction: reverse;
-					}
-					h3{
-						text-transform: uppercase;
-						color: $gold;
-						font-size: 100px;
-						padding: 25px 0;
+					div{
+						width: 100%;
+						h3{
+							text-transform: uppercase;
+							color: $gold;
+							font-size: 100px;
+							padding: 25px 0;
+							@media (max-width: 930px){
+								font-size: 85px;
+							}
+						}
 					}
 					.caja2{
 						width: 310px;
@@ -774,7 +766,13 @@ html{
 							padding-top: 20px;
 							font-family: $serif;
 						}
+						@media (max-width: 930px){
+							width: 290px;
+						}
 					}
+				}
+				@media (max-width: 560px){
+
 				}
 			}
 		}
